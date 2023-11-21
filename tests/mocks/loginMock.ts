@@ -1,22 +1,23 @@
 
-const validPassword = 'password';
+const validPassword = 'ch4ng3m3';
 const noUsernameLoginBody = { username: '', password: validPassword };
-const validUsername = 'Hagnar';
+const validUsername = 'Hagar';
 const noPasswordLoginBody = { username: validUsername, password: '' };
 const notExistingUserBody = { username: 'notfound@email.com', password: validPassword };
 
-const existingUserWithWrongPasswordBody = { email: validUsername, password: 'wrong_password' };
+const existingUserWithWrongPasswordBody = { username: validUsername, password: 'wrong_password' };
 
-const hashedPassword = '$2a$10$lQGsGScdxhjGRuYVJX3PX.347IWLNiSk6hOiMmjxlzLEI32lg5LMW';
+const hashedPassword = '$2a$10$lQGsGScdxhjGRuYVJX3PX.347IWLNiSk6hOiMmjxlzLEI32lg5LMW'
 const existingUser = { 
   id: 1, 
-  email: validUsername,
+  username: validUsername,
+  vocation: 'Guerreiro',
+  level: 10,
   password: hashedPassword,
-  name: 'user1'
 };
 
 
-const validLoginBody = { email: validUsername, password: validPassword };
+const validLoginBody = { username: validUsername, password: validPassword };
 
 export default {
   noUsernameLoginBody,

@@ -38,4 +38,30 @@ it('ao receber um username inexistente, retorne um erro', async function () {
   expect(httpResponse.status).to.equal(401);
   expect(httpResponse.body).to.be.deep.equal({ message: 'Username or password invalid' });
 });
+
+it('ao receber um username existente e uma senha errada, retorne um erro', async function () {
+  const httpRequestBody = loginMock.existingUserWithWrongPasswordBody 
+  const mockFindOneReturn = UserModel.build(loginMock.existingUser);
+  sinon.stub(UserModel, 'findOne').resolves(mockFindOneReturn);
+
+  const httpResponse = await chai.request(app).post('/login')
+    .send(httpRequestBody);
+
+  expect(httpResponse.status).to.equal(401);
+  expect(httpResponse.body).to.be.deep.equal({ message: 'Username or password invalid' });
+});
+
+it('ao receber um username e uma senha válida, retorne um token de login', async function () {
+  const httpRequestBody = loginMock.validLoginBody
+  const mockFindOneReturn = UserModel.build(loginMock.existingUser);
+  sinon.stub(UserModel, 'findOne').resolves(mockFindOneReturn);
+
+  const httpResponse = await chai.request(app).post('/login').send(httpRequestBody);
+
+  expect(httpResponse.status).to.equal(200);
+  expect(httpResponse.body).to.have.key('token');
+});
+
+afterEach(function () { sinon.restore(); });
+
 });
