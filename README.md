@@ -1,10 +1,9 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# :rocket: README em construção ! :rocket:
+
+<h1>O projeto</h1>
+<p>Neste projeto, o foco foi praticar a construção de uma API Node Express utilizando TypeScript e Sequelize.</p>
+<br />
+<p>Foi realizado um CRUD (Create, Read, Update e Delete) de itens medievais, no formato de uma API, utilizando Typescript.
+<br />
+<p>Foram criados alguns endpoints que leem e escrevem em um banco de dados, utilizando o Sequelize.</p>
+<p>Todos os arquivos dentro de /src, com exceção do diretório /seeders e /config, foram desenvolvidos por mim.</p>
