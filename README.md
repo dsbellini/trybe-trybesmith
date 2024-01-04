@@ -1,8 +1,7 @@
-# :rocket: README em construção ! :rocket:
+# :rocket: README -  Trybesmith:rocket:
 
 <h1>O projeto</h1>
 <p>Neste projeto, o foco foi praticar a construção de uma API Node Express utilizando TypeScript e Sequelize.</p>
-<br />
 <p>Foi realizado um CRUD (Create, Read, Update e Delete) de itens medievais, no formato de uma API, utilizando Typescript.
 <br />
 <p>Foram criados alguns endpoints que leem e escrevem em um banco de dados, utilizando o Sequelize.</p>
